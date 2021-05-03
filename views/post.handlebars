@@ -1,0 +1,10 @@
+^^^^^ post.hand^^^^^^<section class="container">
+  <h2 class="post-name"> Post By-{{user.username}}: {{post.name}}  [{{post.createDate}}</h2>
+  <h4>{{post.description}}</h4>
+  <section class="flex-row justify-left">
+    {{#each post.comments as |comment|}}
+    {{> comment-details}}
+    {{/each}}
+    <p>Add Comment</p>
+  </section>
+</section>^^^^^ post.hand^^^^^^
