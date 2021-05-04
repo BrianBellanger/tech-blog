@@ -1,5 +1,6 @@
 ^^^^^ post.hand^^^^^^<section class="container">
-  <h2 class="post-name"> Post By-{{user.username}}: {{post.name}}  [{{post.createDate}}</h2>
+  {{log post}}
+  <h2 class="post-name"> Post By-{{post.user.username}}: {{post.name}}  [{{post.createdAt}}]</h2>
   <h4>{{post.description}}</h4>
   <section class="flex-row justify-left">
     {{#each post.comments as |comment|}}

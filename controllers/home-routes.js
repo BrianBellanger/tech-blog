@@ -43,12 +43,22 @@ router.get('/post/:id', withAuth, async (req, res) => {
           attributes: [
             'username'
           ]
+        },
+        {
+          model: Comment,
+          include: [User]
         }
       ]
     })
 
-    const post = dbPostData.get({ plain: true });
-    console.log("Get one post" + post);
+  //  console.log('dbPostData', dbPostData)
+
+    const post = dbPostData.get({plain: true});
+
+    console.log('yupdate post', post)
+
+    //const post = dbPostData.get({ plain: true });
+   // console.log("Get one post" + post);
     res.render('post', { post, loggedIn: req.session.loggedIn });
   } catch (err) {
     console.log(err);
@@ -96,6 +106,10 @@ router.get('/login', (req, res) => {
   }
   res.render('login');
 });
+
+router.get('/addPost', withAuth, async (req, res) => {
+  res.render('addpost')
+})
 
 
 
