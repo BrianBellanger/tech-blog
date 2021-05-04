@@ -5,7 +5,6 @@ const commentData = [
     body: 'Branches with pink apricot blossoms against a blue background.',
     post_id: 1,
     user_id: 1
-
   },
   {
     body: 'Pink cosmos flowers against a blue sky.',
@@ -25,7 +24,7 @@ const commentData = [
   {
     body: 'Sun setting in the horizon with waves lapping the shore.',
     post_id: 3,
-    user_id: 1
+    user_id: 2
   },
   {
     body: 'Trees with red, orange, yellow leaves reflected on a still lake.',
@@ -35,7 +34,7 @@ const commentData = [
   {
     body: 'Mountains with red and yellow leaves against a background of hazy rolling hills.',
     post_id: 4,
-    user_id: 1
+    user_id: 2
   },
   {
     body: 'Trees with white frozen branches reflected on a frozen river against a light pink sky.',
@@ -44,11 +43,11 @@ const commentData = [
   },
   {
     body: 'Log cabin blanketed in heavy white snow with tall snow covered pine trees in the background.',
-    post_id: 4,
-    user_id: 1
+    post_id: 1,
+    user_id: 2
   }
 ];
 
-const seedComments = () => Comment.bulkCreate(commentData);
+const seedComment = () => Comment.bulkCreate(commentData);
 
-module.exports = seedComments;
+module.exports = seedComment;

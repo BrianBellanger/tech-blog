@@ -1,4 +1,7 @@
-^^^^^ post-details.hand^^^^^^<section class="card">
-  Post By-{{user.username}}: <a href="/post/{{id}}">{{name}}</a>
-  <p>{{description}}</p>
-</section>^^^^^ post-details.hand^^^^^^
+<a href="/post/{{id}}">
+  <section class="card">
+    <p>Post By: {{user.username}} @ {{format_date createdAt}}</p>
+    <p>{{name}}</p>
+    <p>{{description}}</p>
+  </section>
+</a>

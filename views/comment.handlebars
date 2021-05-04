@@ -1,5 +1,6 @@
-^^^^^comment.hand^^^^^^<section class="comment">
+<section class="comment">
   <div class="comment-details">
-    <h3>By-  **user.username**{{user.username}}: **comment.body**{{comment.body}}</h3>
+    <h3>By: {{user.username}} @ {{format_date comment.createdAt}}</h3>
+    <h4>{{comment.body}}</h4>
   </div>
-</section>^^^^^comment.hand^^^^^^
+</section>

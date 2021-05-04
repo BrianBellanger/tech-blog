@@ -9,7 +9,7 @@ const postData = [
   {
     name: 'Post Number 2',
     description: '-- Post na na na a na',
-    user_id: 1
+    user_id: 2
   },
   {
     name: 'Post Number 3',
@@ -19,7 +19,7 @@ const postData = [
   {
     name: 'Post Number 4',
     description: '-- Post achoooo!',
-    user_id: 1
+    user_id: 2
   },
 ];
 
