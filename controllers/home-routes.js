@@ -55,7 +55,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 
     const post = dbPostData.get({plain: true});
 
-    console.log('yupdate post', post)
+    console.log('update post', post)
 
     //const post = dbPostData.get({ plain: true });
    // console.log("Get one post" + post);
@@ -130,13 +130,12 @@ router.post('/addPost', withAuth, async (req, res) => {
 
 
 // DELETE Post
-router.delete('/delPost:id', withAuth, async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const postDel = await Post.destroy({
       where: {
-        id: req.params.id,
-        user_id: req.session.user_id,
-      },
+        id: req.params.id
+      }
     });
 
     if (!postDel) {
