@@ -130,7 +130,7 @@ router.post('/addPost', withAuth, async (req, res) => {
 
 
 // DELETE Post
-router.delete('/:id', withAuth, async (req, res) => {
+router.post('/delPost/:id', withAuth, async (req, res) => {
   try {
     const postDel = await Post.destroy({
       where: {
@@ -144,6 +144,7 @@ router.delete('/:id', withAuth, async (req, res) => {
     }
 
     res.status(200).json(postDel);
+    res.render("homepage");
   } catch (err) {
     res.status(500).json(err);
   }

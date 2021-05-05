@@ -23,4 +23,18 @@ console.log(name + "Desc: "+ description);
   console.log("OK!");
 
 
-  document.querySelector('.addpost-form').addEventListener("submit",addpostFormHandler)
+
+  // const delID = document.querySelector('.delButton').value.trim();
+  const delpostFormHandler = async (e) => {
+    console.log(e.target.value);
+    await fetch('/delPost/' + e.target.value, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+  });
+  }
+
+  
+  
+
+  document.querySelector('.delButton').addEventListener("click", delpostFormHandler);
+  document.querySelector('.addpost-form').addEventListener("submit",addpostFormHandler);
