@@ -20,11 +20,10 @@ console.log(name + "Desc: "+ description);
       }
     }
   };
-  console.log("OK!");
 
 
 
-  // const delID = document.querySelector('.delButton').value.trim();
+
   const delpostFormHandler = async (e) => {
     console.log(e.target.value);
     await fetch('/delPost/' + e.target.value, {
@@ -35,6 +34,5 @@ console.log(name + "Desc: "+ description);
 
   
   
-
-  document.querySelector('.delButton').addEventListener("click", delpostFormHandler);
-  document.querySelector('.addpost-form').addEventListener("submit",addpostFormHandler);
+  //  document.querySelector('#delButton').addEventListener("click", delpostFormHandler);
+  document.querySelector('#addButton').addEventListener("submit", addpostFormHandler);
