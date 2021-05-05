@@ -55,7 +55,7 @@ router.get('/post/:id', withAuth, async (req, res) => {
 
     const post = dbPostData.get({plain: true});
 
-    console.log('update post', post)
+    console.log('Get ONE post', post);
 
     //const post = dbPostData.get({ plain: true });
    // console.log("Get one post" + post);

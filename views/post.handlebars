@@ -1,6 +1,6 @@
 <section class="container">
   {{log post}}
-  <h2 class="post-name">Post By: {{post.user.username}} @ {{format_date post.createdAt}}</h2>
+  <h2 class="post-name">post:::: Post By: {{post.user.username}} @ {{post.createdAt}}</h2>
   <h3>{{post.name}}</h3>
   <h4>{{post.description}}</h4>
    <button class="delButton" value={{post.id}}>Delete</button>
