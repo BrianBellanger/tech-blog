@@ -4,7 +4,6 @@
   <h3>{{post.name}}</h3>
   <h4>{{post.description}}</h4>
    <button class="delButton" value={{post.id}}>Delete</button>
-   <script src="../js/addPost.js"></script>
   <section class="flex-row justify-left">
     {{#each post.comments as |comment|}}
     {{> comment-details}}
@@ -12,3 +11,5 @@
     {{!-- <a href="/addComment">New Comment</a> --}}
   </section>
 </section>
+
+<script src="../js/delPost.js"></script>

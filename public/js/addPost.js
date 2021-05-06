@@ -1,4 +1,5 @@
 const addpostFormHandler = async (event) => {
+  console.log('inside')
     event.preventDefault();
   
     const name = document.querySelector('#name-addpost').value.trim();
@@ -6,8 +7,9 @@ const addpostFormHandler = async (event) => {
   
 console.log(name + "Desc: "+ description);
 
+
     if (name && description) {
-      const response = await fetch('/addPost', {
+      const response = await fetch('/api/posts/addPost', {
         method: 'POST',
         body: JSON.stringify({ name, description }),
         headers: { 'Content-Type': 'application/json' },
@@ -20,21 +22,7 @@ console.log(name + "Desc: "+ description);
       }
     }
   };
-  console.log("OK!");
 
 
 
-  // const delID = document.querySelector('.delButton').value.trim();
-  const delpostFormHandler = async (e) => {
-    console.log(e.target.value);
-    await fetch('/delPost/' + e.target.value, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-  });
-  }
-
-  
-  
-
-  document.querySelector('.delButton').addEventListener("click", delpostFormHandler);
   document.querySelector('.addpost-form').addEventListener("submit",addpostFormHandler);
