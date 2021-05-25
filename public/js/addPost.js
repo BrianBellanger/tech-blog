@@ -1,13 +1,9 @@
 const addpostFormHandler = async (event) => {
-  console.log('inside')
     event.preventDefault();
   
     const name = document.querySelector('#name-addpost').value.trim();
     const description = document.querySelector('#description-addpost').value.trim();
   
-console.log(name + "Desc: "+ description);
-
-
     if (name && description) {
       const response = await fetch('/api/posts/addPost', {
         method: 'POST',
